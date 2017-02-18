@@ -15,6 +15,7 @@ class CourseViewSet(viewsets.ReadOnlyModelViewSet):
 	queryset = Course.objects.all()
 #	serializer_class = CourseSerializer
 	serializer_class = CursoSerializer
+#	authentication_classes = (BasicAuthentication, )
 	permission_classes = (IsAuthenticated, )
 	
 	@detail_route( methods=['get'],
